@@ -3,35 +3,57 @@
 :root {
     /* Background */
     --color-background: #F5F7FA; /* Light Gray Blue */
+    --color-background-alt: #EDF2F7; /* Slightly Darker Gray Blue */
+    --color-background-dark: #E2E8F0; /* Darker Gray Blue */
   
     /* Primary Colors */
     --color-primary: #4A90E2; /* Bright Blue */
     --color-primary-light: #6AA9F4; /* Light Blue */
     --color-primary-dark: #2B73C9; /* Dark Blue */
+    --color-primary-lighter: #8ABEF7; /* Very Light Blue */
+    --color-primary-darker: #1B5BA8; /* Very Dark Blue */
   
     /* Accents */
     --color-primary-accent: #5C9CE6; /* Medium Blue */
     --color-secondary-accent: #7FB3F1; /* Sky Blue */
+    --color-tertiary-accent: #9CC7F5; /* Light Sky Blue */
+    --color-quaternary-accent: #B8D9F9; /* Very Light Sky Blue */
   
     /* CTA Buttons */
     --color-cta-buttons: #4A90E2; /* Bright Blue */
     --color-cta-hover: #357ABD; /* Darker Blue */
+    --color-cta-active: #2A6399; /* Even Darker Blue */
+    --color-cta-disabled: #A5C7E9; /* Muted Blue */
   
     /* Highlights */
     --color-highlights: #E3F0FF; /* Very Light Blue */
     --color-highlights-hover: #C9E2FF; /* Slightly Darker Light Blue */
+    --color-highlights-active: #B0D4FF; /* Medium Light Blue */
   
     /* Text */
     --color-text: #2C3E50; /* Dark Blue Gray */
     --color-text-light: #7F8C8D; /* Light Gray */
     --color-text-dark: #1A2633; /* Very Dark Blue Gray */
+    --color-text-muted: #A0AEC0; /* Muted Gray */
+    --color-text-inverse: #FFFFFF; /* White */
   
     /* Borders/Lines */
     --color-borders: #DCE5EE; /* Light Gray Blue */
     --color-borders-dark: #BDC9D7; /* Darker Gray Blue */
+    --color-borders-light: #EDF2F7; /* Very Light Gray Blue */
+    --color-divider: #E2E8F0; /* Subtle Divider Color */
   
     /* Status Colors */
     --color-success: #2ECC71; /* Green */
+    --color-success-light: #7DEFA1; /* Light Green */
+    --color-success-dark: #25A25A; /* Dark Green */
     --color-warning: #F1C40F; /* Yellow */
+    --color-warning-light: #F7DC6F; /* Light Yellow */
+    --color-warning-dark: #C49B0A; /* Dark Yellow */
     --color-error: #E74C3C; /* Red */
+    --color-error-light: #F1887B; /* Light Red */
+    --color-error-dark: #B83227; /* Dark Red */
+    --color-info: #3498DB; /* Info Blue */
+    --color-info-light: #7FBBE8; /* Light Info Blue */
+    --color-info-dark: #2874A6; /* Dark Info Blue */
   }

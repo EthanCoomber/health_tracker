@@ -1,39 +1,274 @@
 /* src/features/workouts/components/WorkoutList.css */
 
 .workout-list {
-    padding: 1rem;
-    border: 1px solid var(--color-borders);
-    border-radius: 8px;
-    background-color: var(--color-secondary-accent); /* Sky Blue */
-  }
-  
-  .workout-list h3 {
-    margin-top: 0;
-    color: var(--color-text);
-  }
-  
-  .workout-list ul {
+    padding: 2.5rem;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--color-highlights), var(--color-background));
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    margin: 2.5rem auto;
+    max-width: 900px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.workout-list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+}
+
+.workout-list:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, var(--color-highlights-hover), var(--color-background));
+}
+
+.workout-list h3 {
+    margin: 0 0 2.5rem 0;
+    color: var(--color-text-dark);
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 2px solid var(--color-borders);
+    padding-bottom: 1rem;
+}
+
+.workout-icon {
+    color: var(--color-primary-dark);
+    font-size: 1.8rem;
+}
+
+.workout-list ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .workout-list li {
+    margin: 0;
+}
+
+.workout-list li {
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem 0;
+    align-items: center;
+    padding: 1.25rem;
     border-bottom: 1px solid var(--color-borders);
-  }
-  
-  .workout-list li:last-child {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+}
+
+.workout-list li:hover {
+    background-color: var(--color-highlights);
+    transform: translateX(5px);
+    border-left: 4px solid var(--color-primary);
+}
+
+.workout-list li:last-child {
     border-bottom: none;
-  }
-  
-  .workout-name {
-    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.workout-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.workout-name {
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-size: 1.2rem;
+    letter-spacing: 0.3px;
+}
+
+.workout-duration {
+    color: var(--color-text-light);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--color-background);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.duration-icon {
+    color: var(--color-primary-dark);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: var(--color-text-light);
+    background-color: var(--color-highlights);
+    border-radius: 12px;
+    margin: 1rem 0;
+}
+
+.empty-state-subtitle {
+    font-size: 1rem;
+    margin-top: 0.75rem;
+    color: var(--color-text-light);
+    font-style: italic;
+}
+
+.workout-actions {
+    display: flex;
+    align-items: center;
+}
+
+.action-btn-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btn {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: var(--color-text-light);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+}
+
+.action-btn.info:hover {
+    color: var(--color-primary);
+    background-color: rgba(74, 144, 226, 0.1);
+}
+
+.action-btn.edit:hover {
+    color: var(--color-warning);
+    background-color: rgba(241, 196, 15, 0.1);
+}
+
+.action-btn.delete:hover {
+    color: var(--color-error);
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+.workout-details {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--color-highlights);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-primary);
+}
+
+.workout-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.detail-label {
+    color: var(--color-text-dark);
+    min-width: 100px;
+}
+
+.detail-value {
     color: var(--color-text);
-  }
-  
-  .workout-duration {
-    color: var(--color-text);
-  }
-  
+    text-transform: capitalize;
+}
+
+.edit-workout-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--color-highlights);
+    border-radius: 8px;
+    border: 1px solid var(--color-borders);
+    flex-wrap: wrap;
+}
+
+.edit-input,
+.edit-select {
+    padding: 0.75rem;
+    border: 1px solid var(--color-borders);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+.edit-input:focus,
+.edit-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.edit-name {
+    font-weight: 500;
+    flex: 2;
+    min-width: 200px;
+}
+
+.edit-duration {
+    width: 120px;
+    flex: 0 0 auto;
+}
+
+.edit-intensity,
+.edit-activity-type {
+    cursor: pointer;
+    flex: 1;
+    min-width: 150px;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.edit-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.edit-save {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.edit-save:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+}
+
+.edit-cancel {
+    background-color: var(--color-error-light);
+    color: var(--color-error);
+}
+
+.edit-cancel:hover {
+    background-color: var(--color-error);
+    color: white;
+    transform: translateY(-1px);
+}
+

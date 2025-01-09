@@ -2,7 +2,7 @@
 
 .dashboard {
   padding: 2.5rem;
-  background: linear-gradient(to bottom right, white, var(--color-background));
+  background: linear-gradient(to bottom right, var(--color-background-alt), var(--color-background));
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   animation: fadeIn 1s ease-in;
@@ -12,12 +12,12 @@
 }
 
 .dashboard h2 {
-  color: var(--color-text);
+  color: var(--color-text-dark);
   font-size: 2.8rem;
   margin-bottom: 1.8rem;
   animation: slideInFromLeft 1s ease-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid var(--color-primary-accent);
+  border-bottom: 3px solid var(--color-primary);
   padding-bottom: 0.5rem;
   width: fit-content;
 }
@@ -39,17 +39,17 @@
   animation: fadeInUp 0.8s ease-out;
   padding: 2rem;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(135deg, var(--color-highlights), var(--color-background-alt));
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
 }
 
 .importance-section h3,
 .how-to-section h3,
 .additional-features h3 {
-  color: var(--color-text);
+  color: var(--color-text-dark);
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  border-left: 5px solid var(--color-secondary-accent);
+  border-left: 5px solid var(--color-primary);
   padding-left: 1rem;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .benefit-item {
-  background: linear-gradient(145deg, #ffffff, var(--color-background));
+  background: linear-gradient(145deg, var(--color-background-alt), var(--color-background));
   padding: 1.5rem;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -76,7 +76,8 @@
 .benefit-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  border-color: var(--color-primary-accent);
+  border-color: var(--color-primary);
+  background: linear-gradient(145deg, var(--color-highlights), var(--color-highlights-hover));
 }
 
 .benefit-item::before {
@@ -86,17 +87,17 @@
   left: 0;
   width: 4px;
   height: 100%;
-  background: var(--color-primary-accent);
+  background: var(--color-primary);
   opacity: 0.7;
 }
 
 .benefit-title {
   display: block;
-  color: var(--color-text);
+  color: var(--color-text-dark);
   font-size: 1.3rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--color-secondary-accent);
+  border-bottom: 2px solid var(--color-primary-light);
 }
 
 .section-description {
@@ -107,13 +108,13 @@
   text-align: center;
   line-height: 1.8;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--color-highlights);
   border-radius: 8px;
   border: 1px solid var(--color-borders);
 }
 
 .instruction-step {
-  background: linear-gradient(135deg, var(--color-background), white);
+  background: linear-gradient(135deg, var(--color-highlights), var(--color-background-alt));
   padding: 2rem;
   border-radius: 12px;
   margin-bottom: 2rem;
@@ -126,11 +127,12 @@
 .instruction-step:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-  border-color: var(--color-primary-accent);
+  border-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-highlights-hover), var(--color-background));
 }
 
 .instruction-step h4 {
-  color: var(--color-text);
+  color: var(--color-text-dark);
   margin-bottom: 1.2rem;
   font-size: 1.5rem;
   display: flex;
@@ -143,7 +145,7 @@
   display: inline-block;
   width: 8px;
   height: 8px;
-  background-color: var(--color-highlights);
+  background-color: var(--color-primary);
   border-radius: 50%;
 }
 
@@ -160,7 +162,7 @@
 }
 
 .instruction-step li::marker {
-  color: var(--color-primary-accent);
+  color: var(--color-primary);
 }
 
 .instructions {
@@ -168,7 +170,7 @@
   overflow-y: auto;
   padding-right: 1.5rem;
   scrollbar-width: thin;
-  scrollbar-color: var(--color-primary-accent) var(--color-background);
+  scrollbar-color: var(--color-primary) var(--color-background);
 }
 
 .instructions::-webkit-scrollbar {
@@ -181,7 +183,7 @@
 }
 
 .instructions::-webkit-scrollbar-thumb {
-  background: var(--color-primary-accent);
+  background: var(--color-primary);
   border-radius: 4px;
 }
 
