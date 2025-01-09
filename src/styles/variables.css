@@ -2,22 +2,21 @@
 
 :root {
     /* Background */
-    --color-background: #F5F5F5;
+    --color-background: #F5F5F5; /* Light Gray */
   
     /* Accents */
-    --color-primary-accent: #A8E6CF; /* Mint Green */
+    --color-primary-accent: #FFB6C1; /* Light Pink */
     --color-secondary-accent: #87CEEB; /* Sky Blue */
   
     /* CTA Buttons */
-    --color-cta-buttons: #FF6F61; /* Coral */
+    --color-cta-buttons: #ADD8E6; /* Light Blue */
   
     /* Highlights */
-    --color-highlights: #FFC107; /* Golden Yellow */
+    --color-highlights: #FFC0CB; /* Pink */
   
     /* Text */
-    --color-text: #333333; /* Charcoal Gray */
+    --color-text: #4682B4; /* Steel Blue */
   
     /* Borders/Lines */
-    --color-borders: #D3D3D3; /* Light Gray */
+    --color-borders: #B0E0E6; /* Powder Blue */
   }
-  
