@@ -1,28 +1,92 @@
 /* src/pages/WorkoutsPage.css */
 
 .workouts-page {
-    padding: 2rem;
-    background-color: var(--color-background);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    background: linear-gradient(to bottom right, var(--color-background-alt), var(--color-background));
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     max-width: 1200px;
     margin: 0 auto;
     min-height: 100vh;
-  }
-  
-  .workouts-page h2 {
-    color: var(--color-text);
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+    animation: fadeIn 1s ease-in;
+    border: 1px solid var(--color-borders);
+}
+
+.workouts-page h2 {
+    color: var(--color-text-dark);
+    font-size: 2.8rem;
+    margin-bottom: 1.8rem;
     text-align: center;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--color-primary-accent);
-  }
+    border-bottom: 3px solid var(--color-primary);
+    animation: slideInFromLeft 1s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-  .workouts-page > * {
+.workouts-description {
+    color: var(--color-text);
+    line-height: 1.8;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    animation: slideInFromRight 1s ease-out;
+    letter-spacing: 0.3px;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.show-add-workout-btn {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.show-add-workout-btn:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.workouts-page > * {
     margin-bottom: 2rem;
-  }
+}
 
-  .workouts-page > *:last-child {
+.workouts-page > *:last-child {
     margin-bottom: 0;
-  }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

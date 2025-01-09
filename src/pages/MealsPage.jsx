@@ -8,6 +8,10 @@ const MealsPage = () => {
   return (
     <div className="meals-page">
       <h2>Meals</h2>
+      <p className="meals-description">
+        Track and manage your daily meals to maintain a balanced diet. Add new meals, view your meal history, 
+        and monitor your nutritional intake to help achieve your health goals.
+      </p>
       <AddMeal />
       <MealList />
     </div>
