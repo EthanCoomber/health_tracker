@@ -2,21 +2,36 @@
 
 :root {
     /* Background */
-    --color-background: #F5F5F5; /* Light Gray */
+    --color-background: #F5F7FA; /* Light Gray Blue */
+  
+    /* Primary Colors */
+    --color-primary: #4A90E2; /* Bright Blue */
+    --color-primary-light: #6AA9F4; /* Light Blue */
+    --color-primary-dark: #2B73C9; /* Dark Blue */
   
     /* Accents */
-    --color-primary-accent: #FFB6C1; /* Light Pink */
-    --color-secondary-accent: #87CEEB; /* Sky Blue */
+    --color-primary-accent: #5C9CE6; /* Medium Blue */
+    --color-secondary-accent: #7FB3F1; /* Sky Blue */
   
     /* CTA Buttons */
-    --color-cta-buttons: #ADD8E6; /* Light Blue */
+    --color-cta-buttons: #4A90E2; /* Bright Blue */
+    --color-cta-hover: #357ABD; /* Darker Blue */
   
     /* Highlights */
-    --color-highlights: #FFC0CB; /* Pink */
+    --color-highlights: #E3F0FF; /* Very Light Blue */
+    --color-highlights-hover: #C9E2FF; /* Slightly Darker Light Blue */
   
     /* Text */
-    --color-text: #4682B4; /* Steel Blue */
+    --color-text: #2C3E50; /* Dark Blue Gray */
+    --color-text-light: #7F8C8D; /* Light Gray */
+    --color-text-dark: #1A2633; /* Very Dark Blue Gray */
   
     /* Borders/Lines */
-    --color-borders: #B0E0E6; /* Powder Blue */
+    --color-borders: #DCE5EE; /* Light Gray Blue */
+    --color-borders-dark: #BDC9D7; /* Darker Gray Blue */
+  
+    /* Status Colors */
+    --color-success: #2ECC71; /* Green */
+    --color-warning: #F1C40F; /* Yellow */
+    --color-error: #E74C3C; /* Red */
   }
