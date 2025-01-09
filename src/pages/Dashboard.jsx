@@ -1,6 +1,6 @@
 // src/pages/Dashboard.jsx
 import React from 'react';
-import './Dashboard.css'; // Optional: Create a CSS file for Dashboard styles
+import './Dashboard.css'; // Ensure this CSS file exists
 
 const Dashboard = () => {
   return (

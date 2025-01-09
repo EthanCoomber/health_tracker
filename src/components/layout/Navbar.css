@@ -1,0 +1,12 @@
+/* src/components/layout/Navbar.css */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-primary-accent); /* Mint Green */
+    padding: 1rem 2rem;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-borders);
+  }
+  

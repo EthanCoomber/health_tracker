@@ -52,4 +52,7 @@ export const {
   clearAllWorkouts
 } = workoutsSlice.actions;
 
+// Selectors
+export const selectAllWorkouts = (state) => state.workouts.workouts;
+
 export default workoutsSlice.reducer;

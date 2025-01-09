@@ -1,6 +1,6 @@
 // src/components/common/Header.jsx
 import React from 'react';
-import './Header.css'; // Optional: Create a CSS file for Header styles
+import './Header.css'; // Ensure this CSS file exists
 
 const Header = ({ title }) => {
   return <h1 className="header-title">{title}</h1>;

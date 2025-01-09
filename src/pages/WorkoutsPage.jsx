@@ -2,7 +2,7 @@
 import React from 'react';
 import WorkoutList from '../features/workouts/components/WorkoutList';
 import AddWorkout from '../features/workouts/components/AddWorkout';
-import './WorkoutsPage.css'; // Optional: Create a CSS file for WorkoutsPage styles
+import './WorkoutsPage.css'; // Ensure this CSS file exists
 
 const WorkoutsPage = () => {
   return (

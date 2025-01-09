@@ -1,7 +1,7 @@
 // src/components/layout/Sidebar.jsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './Sidebar.css'; // Optional: Create a CSS file for Sidebar styles
+import './Sidebar.css'; // Ensure this CSS file exists
 
 const Sidebar = () => {
   return (

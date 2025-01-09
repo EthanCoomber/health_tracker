@@ -1,0 +1,32 @@
+/* src/features/workouts/components/AddWorkout.css */
+
+.add-workout-form {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid var(--color-borders);
+    border-radius: 8px;
+    background-color: var(--color-primary-accent); /* Mint Green */
+  }
+  
+  .add-workout-form h3 {
+    margin-top: 0;
+    color: var(--color-text);
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+  }
+  
+  .form-group input {
+    padding: 0.5rem;
+    border: 1px solid var(--color-borders);
+    border-radius: 4px;
+  }
+  

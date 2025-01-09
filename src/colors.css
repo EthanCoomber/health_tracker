@@ -1,0 +1,11 @@
+/* colors.scss */
+:root {
+    --background: #F5F5F5;
+    --primary-accent: #A8E6CF;
+    --secondary-accent: #87CEEB;
+    --cta-button: #FF6F61;
+    --highlight: #FFC107;
+    --text-color: #333333;
+    --border-color: #D3D3D3;
+  }
+  

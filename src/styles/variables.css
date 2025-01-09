@@ -1,0 +1,23 @@
+/* src/styles/variables.css */
+
+:root {
+    /* Background */
+    --color-background: #F5F5F5;
+  
+    /* Accents */
+    --color-primary-accent: #A8E6CF; /* Mint Green */
+    --color-secondary-accent: #87CEEB; /* Sky Blue */
+  
+    /* CTA Buttons */
+    --color-cta-buttons: #FF6F61; /* Coral */
+  
+    /* Highlights */
+    --color-highlights: #FFC107; /* Golden Yellow */
+  
+    /* Text */
+    --color-text: #333333; /* Charcoal Gray */
+  
+    /* Borders/Lines */
+    --color-borders: #D3D3D3; /* Light Gray */
+  }
+  

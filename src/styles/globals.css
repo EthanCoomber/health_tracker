@@ -1,0 +1,21 @@
+/* src/styles/globals.css */
+
+@import './variables.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+}
+
+/* You can also set default styles for links, buttons, etc., using the variables */
+a {
+  color: var(--color-secondary-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

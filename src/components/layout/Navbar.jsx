@@ -1,7 +1,7 @@
 // src/components/layout/Navbar.jsx
 import React from 'react';
 import Header from '../common/Header';
-import './Navbar.css'; // Optional: Create a CSS file for Navbar styles
+import './Navbar.css'; // Ensure this CSS file exists
 
 const Navbar = () => {
   return (
