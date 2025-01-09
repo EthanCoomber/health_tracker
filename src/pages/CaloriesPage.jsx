@@ -8,7 +8,7 @@ const CaloriesPage = () => {
   return (
     <div className="calories-page">
       <h2>Calorie Tracking</h2>
-      <CalorieTracker />
+      {/* <CalorieTracker /> */}
       <CalorieChart />
     </div>
   );
