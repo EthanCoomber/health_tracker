@@ -10,14 +10,14 @@
     --color-primary: #4A90E2; /* Bright Blue */
     --color-primary-light: #6AA9F4; /* Light Blue */
     --color-primary-dark: #2B73C9; /* Dark Blue */
-    --color-primary-lighter: #8ABEF7; /* Very Light Blue */
+    --color-primary-lighter: #FF9F8B; /* Coral Pink */
     --color-primary-darker: #1B5BA8; /* Very Dark Blue */
   
     /* Accents */
     --color-primary-accent: #5C9CE6; /* Medium Blue */
-    --color-secondary-accent: #7FB3F1; /* Sky Blue */
-    --color-tertiary-accent: #9CC7F5; /* Light Sky Blue */
-    --color-quaternary-accent: #B8D9F9; /* Very Light Sky Blue */
+    --color-secondary-accent: #FF8B8B; /* Soft Red/Pink */
+    --color-tertiary-accent: #98D8C1; /* Mint Green */
+    --color-quaternary-accent: #F7C8E0; /* Light Pink */
   
     /* CTA Buttons */
     --color-cta-buttons: #4A90E2; /* Bright Blue */
@@ -27,7 +27,7 @@
   
     /* Highlights */
     --color-highlights: #E3F0FF; /* Very Light Blue */
-    --color-highlights-hover: #C9E2FF; /* Slightly Darker Light Blue */
+    --color-highlights-hover: #FFE4E1; /* Misty Rose */
     --color-highlights-active: #B0D4FF; /* Medium Light Blue */
   
     /* Text */
