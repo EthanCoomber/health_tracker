@@ -1,17 +1,230 @@
 /* src/pages/Dashboard.css */
 
 .dashboard {
-    padding: 2rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  background: linear-gradient(to bottom right, white, var(--color-background));
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 1s ease-in;
+  max-height: 100%;
+  overflow-y: auto;
+  border: 1px solid var(--color-borders);
+}
+
+.dashboard h2 {
+  color: var(--color-text);
+  font-size: 2.8rem;
+  margin-bottom: 1.8rem;
+  animation: slideInFromLeft 1s ease-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid var(--color-primary-accent);
+  padding-bottom: 0.5rem;
+  width: fit-content;
+}
+
+.dashboard p {
+  color: var(--color-text);
+  line-height: 1.8;
+  font-size: 1.2rem;
+  animation: slideInFromRight 1s ease-out;
+  letter-spacing: 0.3px;
+}
+
+.importance-section,
+.how-to-section,
+.additional-features {
+  opacity: 1;
+  transform: translateY(0);
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease-out;
+  padding: 2rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.importance-section h3,
+.how-to-section h3,
+.additional-features h3 {
+  color: var(--color-text);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid var(--color-secondary-accent);
+  padding-left: 1rem;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.benefit-item {
+  background: linear-gradient(145deg, #ffffff, var(--color-background));
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-borders);
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-primary-accent);
+}
+
+.benefit-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--color-primary-accent);
+  opacity: 0.7;
+}
+
+.benefit-title {
+  display: block;
+  color: var(--color-text);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-secondary-accent);
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  line-height: 1.8;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  border: 1px solid var(--color-borders);
+}
+
+.instruction-step {
+  background: linear-gradient(135deg, var(--color-background), white);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid var(--color-borders);
+  transition: all 0.4s ease;
+  overflow-y: auto;
+  position: relative;
+}
+
+.instruction-step:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  border-color: var(--color-primary-accent);
+}
+
+.instruction-step h4 {
+  color: var(--color-text);
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.instruction-step h4::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-highlights);
+  border-radius: 50%;
+}
+
+.instruction-step ul {
+  padding-left: 2rem;
+  margin: 0.5rem 0;
+}
+
+.instruction-step li {
+  margin: 0.8rem 0;
+  color: var(--color-text);
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.instruction-step li::marker {
+  color: var(--color-primary-accent);
+}
+
+.instructions {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding-right: 1.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary-accent) var(--color-background);
+}
+
+.instructions::-webkit-scrollbar {
+  width: 8px;
+}
+
+.instructions::-webkit-scrollbar-track {
+  background: var(--color-background);
+  border-radius: 4px;
+}
+
+.instructions::-webkit-scrollbar-thumb {
+  background: var(--color-primary-accent);
+  border-radius: 4px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
   }
-  
-  .dashboard h2 {
-    color: var(--color-text);
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .dashboard p {
-    color: var(--color-text);
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
   }
-  
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
