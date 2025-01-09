@@ -1,35 +1,46 @@
 /* src/pages/MealsPage.css */
 
 .meals-page {
-  padding: 2.5rem;
+  padding: 3rem 4rem;
   background: linear-gradient(to bottom right, var(--color-background-alt), var(--color-background));
-  border-radius: 12px;
+  border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   animation: fadeIn 1s ease-in;
-  max-height: 100%;
   overflow-y: auto;
   border: 1px solid var(--color-borders);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .meals-page h2 {
   color: var(--color-text-dark);
-  font-size: 2.8rem;
-  margin-bottom: 1.8rem;
+  font-size: 3rem;
+  margin: 0;
+  padding-bottom: 1rem;
   animation: slideInFromLeft 1s ease-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   border-bottom: 3px solid var(--color-primary);
-  padding-bottom: 0.5rem;
   width: fit-content;
+  position: relative;
 }
 
 .meals-description {
   color: var(--color-text);
   line-height: 1.8;
   font-size: 1.2rem;
-  margin-bottom: 2.5rem;
+  margin: 0;
   animation: slideInFromRight 1s ease-out;
   letter-spacing: 0.3px;
   max-width: 800px;
+  padding: 1rem 0 0.5rem;
+}
+
+.show-add-meal-btn {
+  align-self: flex-start;
+  margin-bottom: 1rem;
 }
 
 @keyframes fadeIn {
