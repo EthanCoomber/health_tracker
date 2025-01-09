@@ -2,14 +2,6 @@
 
 @import './variables.css';
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: Arial, sans-serif;
-}
-
 /* You can also set default styles for links, buttons, etc., using the variables */
 a {
   color: var(--color-secondary-accent);
@@ -19,3 +11,58 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden; /* Prevent body scroll if using fixed Navbar and Sidebar */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.page-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto; /* Allow scrolling for main content */
+  background-color: #ffffff; /* White background for main content */
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--color-borders);
+  }
+
+  .page-content {
+    padding: 1rem;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+}
+

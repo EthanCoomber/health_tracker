@@ -3,33 +3,33 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css'; // Ensure this CSS file exists
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
       <nav>
         <ul>
           <li>
-            <NavLink to="/dashboard" activeClassName="active-link">
+            <NavLink to="/dashboard" className={({ isActive }) => (isActive ? 'active-link' : undefined)} onClick={toggleSidebar}>
               Dashboard
             </NavLink>
           </li>
           <li>
-            <NavLink to="/workouts" activeClassName="active-link">
+            <NavLink to="/workouts" className={({ isActive }) => (isActive ? 'active-link' : undefined)} onClick={toggleSidebar}>
               Workouts
             </NavLink>
           </li>
           <li>
-            <NavLink to="/meals" activeClassName="active-link">
+            <NavLink to="/meals" className={({ isActive }) => (isActive ? 'active-link' : undefined)} onClick={toggleSidebar}>
               Meals
             </NavLink>
           </li>
           <li>
-            <NavLink to="/calories" activeClassName="active-link">
+            <NavLink to="/calories" className={({ isActive }) => (isActive ? 'active-link' : undefined)} onClick={toggleSidebar}>
               Calories
             </NavLink>
           </li>
           <li>
-            <NavLink to="/settings" activeClassName="active-link">
+            <NavLink to="/settings" className={({ isActive }) => (isActive ? 'active-link' : undefined)} onClick={toggleSidebar}>
               Settings
             </NavLink>
           </li>

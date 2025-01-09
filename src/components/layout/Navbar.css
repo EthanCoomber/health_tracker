@@ -1,12 +1,53 @@
 /* src/components/layout/Navbar.css */
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--color-primary-accent); /* Mint Green */
-    padding: 1rem 2rem;
-    color: var(--color-text);
-    border-bottom: 1px solid var(--color-borders);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-primary-accent); /* Mint Green */
+  padding: 1rem 2rem;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-borders);
+  height: 60px; /* Fixed height for Navbar */
+  flex-shrink: 0; /* Prevent Navbar from shrinking */
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.profile-button {
+  background-color: var(--color-cta-buttons); /* Coral */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
+  background-color: #e65b50; /* Darker Coral on hover */
+}
+
+.sidebar-toggle {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block; /* Show toggle on smaller screens */
   }
   
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+}
