@@ -5,15 +5,15 @@ import './Dashboard.css'; // Ensure this CSS file exists
 const Dashboard = () => {
   return (
     <div className="dashboard">
-      <div className="dashboard-hero">
+      <div className="dashboard-hero section-container">
         <img 
           src="/assets/images/cool_health_tracking.avif" 
           alt="Health tracking visualization" 
-          className="hero-image"
+          className="hero-image dashboard-image"
         />
-        <div className="hero-content">
-          <h2>Welcome to Your Health Dashboard</h2>
-          <p>Your comprehensive health tracking platform powered by advanced AI technology to optimize your fitness journey.</p>
+        <div className="hero-content dashboard-content">
+          <h2 className="dashboard-title">Welcome to Your Health Dashboard</h2>
+          <p className="dashboard-description">Your comprehensive health tracking platform powered by advanced AI technology to optimize your fitness journey.</p>
         </div>
       </div>
 

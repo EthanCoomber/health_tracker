@@ -60,6 +60,7 @@
   );
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow */
+  text-align: center; /* Added text-align center */
 }
 
 .hero-content h2 {
@@ -67,6 +68,7 @@
   margin-bottom: 1rem;
   color: white;
   font-weight: 700;
+  text-align: center; /* Added text-align center */
 }
 
 .hero-content p {
@@ -74,6 +76,9 @@
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.95);
   max-width: 800px;
+  margin-left: auto; /* Center the paragraph */
+  margin-right: auto;
+  text-align: center; /* Added text-align center */
 }
 
 .importance-section,
