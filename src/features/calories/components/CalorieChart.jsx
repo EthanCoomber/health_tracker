@@ -179,7 +179,7 @@ const CalorieChart = () => {
             <LineChart data={data}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" />
-              <YAxis />
+              <YAxis domain={['dataMin - 5', 'dataMax + 5']}  />
               <Tooltip />
               <Legend />
               <Line type="monotone" dataKey="weight" stroke="#8884d8" name="Actual Weight" />
