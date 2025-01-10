@@ -11,6 +11,30 @@
   animation: fadeIn 0.8s ease-out;
 }
 
+.dashboard-header {
+  position: relative;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  height: 147px; /* Increased from 147px */
+  width: 342px; /* Increased from 342px */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse; /* Image moves to right */
+  align-items: center;
+  gap: 2rem;
+}
+
+.dashboard-header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  filter: brightness(0.7);
+}
+
 .calorie-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

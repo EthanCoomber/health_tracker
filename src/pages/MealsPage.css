@@ -74,31 +74,49 @@
   font-weight: 500; /* Added font weight */
 }
 
-.meal-images-grid {
+.meals-image-grid {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin: 2rem 0;
+  position: relative;
+  min-height: 250px;
 }
 
-.image-pair {
+.meals-image-pair {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
+  position: relative;
+  width: 100%;
 }
 
-.meal-image {
+.meals-image {
   width: calc(50% - 0.75rem);
   height: 250px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
 }
 
-.meal-image:hover {
+.meals-image:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.meals-image.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+  position: absolute;
+}
+
+.meals-image.fade-in {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .show-add-meal-btn {
@@ -136,5 +154,16 @@
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@keyframes imageFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }

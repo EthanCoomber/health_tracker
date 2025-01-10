@@ -119,6 +119,14 @@ const CalorieChart = () => {
 
   return (
     <div className="calorie-dashboard">
+      <div className="dashboard-header">
+        <img 
+          src="/assets/images/health_data.png" 
+          alt="Health tracking visualization"
+          className="dashboard-header-image"
+        />
+      </div>
+
       <div className="calorie-stats">
         <div className="stat-card daily-averages">
           <h4 className="stat-card-title">Daily Averages</h4>
