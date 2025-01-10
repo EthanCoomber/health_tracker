@@ -5,15 +5,15 @@ import './Navbar.css'; // Ensure this CSS file exists
 
 const Navbar = ({ toggleSidebar }) => {
   return (
-    <header className="navbar">
-      <div className="navbar-left">
-        <button className="sidebar-toggle" onClick={toggleSidebar}>
+    <header className="navbar navbar-main navbar-fixed">
+      <div className="navbar-left navbar-section">
+        <button className="sidebar-toggle btn btn-icon" onClick={toggleSidebar}>
           &#9776; {/* Hamburger Icon */}
         </button>
-        <Header title="Health Tracker" />
+        <Header title="Health Tracker" className="navbar-header" />
       </div>
-      <div className="navbar-actions">
-        <button className="profile-button">Profile</button>
+      <div className="navbar-actions navbar-section">
+        <button className="profile-button btn btn-primary btn-icon">Profile</button>
       </div>
     </header>
   );

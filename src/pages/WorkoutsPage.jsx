@@ -18,12 +18,29 @@ const WorkoutsPage = () => {
 
   return (
     <div className="workouts-page">
-      <h2>Workouts</h2>
-      <p className="workouts-description">
-        Track and manage your fitness journey by logging your workouts. Add new exercises, 
-        view your workout history, and monitor your progress to help achieve your fitness goals. 
-        Stay motivated by seeing your improvements over time.
-      </p>
+      <div className="workouts-hero">
+        <img 
+          src="/assets/images/workout_class.png"
+          alt="People working out in a fitness class"
+          className="hero-image"
+        />
+        <div className="hero-content">
+          <h2>Workouts</h2>
+          <p className="workouts-description">
+            Track and manage your fitness journey by logging your workouts. Add new exercises, 
+            view your workout history, and monitor your progress to help achieve your fitness goals. 
+            Stay motivated by seeing your improvements over time.
+          </p>
+        </div>
+      </div>
+
+      <div className="workout-images-grid">
+        <img src="/assets/images/running.jpeg" alt="Person running" className="workout-image" />
+        <img src="/assets/images/lunge.jpeg" alt="Person doing lunges" className="workout-image" />
+        <img src="/assets/images/planking.webp" alt="Person planking" className="workout-image" />
+        <img src="/assets/images/woman_treadmill.webp" alt="Woman on treadmill" className="workout-image" />
+      </div>
+
       {!showAddWorkout && (
         <Button onClick={handleShowAddWorkout} className="show-add-workout-btn">
           Add Workout

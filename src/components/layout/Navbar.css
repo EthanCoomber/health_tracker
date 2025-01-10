@@ -4,72 +4,113 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, var(--color-primary-accent), rgba(255, 255, 255, 0.95));
-  padding: 1rem 2rem;
-  color: var(--color-text);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  height: 70px;
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary), var(--color-primary-light));
+  padding: 1.2rem 2.5rem;
+  color: var(--color-text-inverse);
+  border-bottom: 3px solid var(--color-primary-darker);
+  height: 80px;
   flex-shrink: 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   position: relative;
   z-index: 100;
+  animation: navbarFadeIn 0.5s ease-out;
 }
 
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.8rem;
 }
 
 .profile-button {
-  background: var(--color-cta-buttons);
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--color-text-inverse);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 0.8rem 1.8rem;
+  border-radius: 12px;
   cursor: pointer;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 8px rgba(230, 91, 80, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.8rem;
+  backdrop-filter: blur(8px);
 }
 
 .profile-button:hover {
-  background-color: #e65b50;
+  background: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(230, 91, 80, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .profile-button:active {
   transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(230, 91, 80, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .sidebar-toggle {
   display: none;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.6rem;
   cursor: pointer;
-  margin-right: 1.5rem;
-  color: var(--color-text);
-  padding: 0.5rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  margin-right: 1.8rem;
+  color: var(--color-text-inverse);
+  padding: 0.6rem;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
 }
 
 .sidebar-toggle:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.8rem;
+}
+
+.navbar-header {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, var(--color-text-inverse), var(--color-quaternary-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titlePulse 2s ease-in-out infinite;
+}
+
+@keyframes titlePulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes navbarFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
@@ -80,10 +121,10 @@
   }
   
   .navbar {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
   }
   
   .profile-button {
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
   }
 }

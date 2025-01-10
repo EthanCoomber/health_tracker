@@ -16,27 +16,89 @@
   position: relative;
 }
 
+.meals-hero {
+  position: relative;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  filter: brightness(0.7); /* Increased brightness from 0.5 for better readability */
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 70%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: fit-content;
+  min-width: 80%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+}
+
 .meals-page h2 {
-  color: var(--color-text-dark);
+  color: var(--color-text-inverse);
   font-size: 3rem;
   margin: 0;
   padding-bottom: 1rem;
   animation: slideInFromLeft 1s ease-out;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Increased text shadow */
   border-bottom: 3px solid var(--color-primary);
   width: fit-content;
-  position: relative;
+  margin: 0 auto; /* Center the heading */
 }
 
 .meals-description {
-  color: var(--color-text);
+  color: var(--color-text-inverse);
   line-height: 1.8;
-  font-size: 1.2rem;
+  font-size: 1.3rem; /* Increased from 1.2rem */
   margin: 0;
   animation: slideInFromRight 1s ease-out;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px; /* Increased from 0.3px */
   max-width: 800px;
-  padding: 1rem 0 0.5rem;
+  padding: 1.5rem 0 0.5rem; /* Increased top padding */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Increased text shadow */
+  font-weight: 500; /* Added font weight */
+}
+
+.meal-images-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.image-pair {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.meal-image {
+  width: calc(50% - 0.75rem);
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meal-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .show-add-meal-btn {

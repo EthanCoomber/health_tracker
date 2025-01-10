@@ -30,6 +30,52 @@
   letter-spacing: 0.3px;
 }
 
+.dashboard-hero {
+  position: relative;
+  margin-bottom: 3rem;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image {
+  width: 100%;
+  height: 350px; /* Reduced height */
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  filter: brightness(0.7); /* Darkens the image slightly */
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem; /* Increased padding */
+  background: linear-gradient(to top, 
+    rgba(0, 0, 0, 0.9) 0%, /* Darker at bottom */
+    rgba(0, 0, 0, 0.7) 50%, /* Gradually lighter */
+    rgba(0, 0, 0, 0.3) 100% /* Very light at top */
+  );
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow */
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 800px;
+}
+
 .importance-section,
 .how-to-section,
 .additional-features {
@@ -41,6 +87,46 @@
   border-radius: 10px;
   background: linear-gradient(135deg, var(--color-highlights), var(--color-background-alt));
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.importance-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.importance-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.importance-image:hover {
+  transform: scale(1.02);
+}
+
+.features-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.features-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.features-image:hover {
+  transform: scale(1.02);
 }
 
 .importance-section h3,
@@ -185,6 +271,22 @@
 .instructions::-webkit-scrollbar-thumb {
   background: var(--color-primary);
   border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .importance-content,
+  .features-content {
+    grid-template-columns: 1fr;
+  }
+
+  .importance-image,
+  .features-image {
+    height: 300px;
+  }
+
+  .hero-image {
+    height: 300px;
+  }
 }
 
 @keyframes fadeIn {

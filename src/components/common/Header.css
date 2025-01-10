@@ -1,8 +1,16 @@
 /* src/components/common/Header.css */
 
 .header-title {
-    margin: 0;
-    font-size: 1.5rem;
-    color: var(--color-text);
-  }
-  
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-inverse);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.header-title:hover {
+  transform: scale(1.02);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}

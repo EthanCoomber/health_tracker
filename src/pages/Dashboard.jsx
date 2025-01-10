@@ -5,35 +5,53 @@ import './Dashboard.css'; // Ensure this CSS file exists
 const Dashboard = () => {
   return (
     <div className="dashboard">
-      <h2>Welcome to Your Health Dashboard</h2>
-      <p>Your comprehensive health tracking platform powered by advanced AI technology to optimize your fitness journey.</p>
+      <div className="dashboard-hero">
+        <img 
+          src="/assets/images/cool_health_tracking.avif" 
+          alt="Health tracking visualization" 
+          className="hero-image"
+        />
+        <div className="hero-content">
+          <h2>Welcome to Your Health Dashboard</h2>
+          <p>Your comprehensive health tracking platform powered by advanced AI technology to optimize your fitness journey.</p>
+        </div>
+      </div>
 
       <section className="importance-section section-container">
         <h3 className="section-title">Why Track Your Health?</h3>
-        <p className="section-description">
-          Understanding and monitoring your health metrics is crucial for achieving your fitness goals. 
-          Our AI-powered platform revolutionizes how you approach health and fitness by:
-        </p>
-        <ul className="benefits-list">
-          <li className="benefit-item">
-            <strong className="benefit-title">Personalized Calorie Calculations:</strong> Our AI analyzes your age, weight, height, 
-            activity level, and metabolic rate to determine your optimal daily calorie intake. This precision 
-            ensures you're neither overeating nor undernourishing your body.
-          </li>
-          <li className="benefit-item">
-            <strong className="benefit-title">Smart Protein Recommendations:</strong> Based on your workout intensity, muscle mass, 
-            and fitness goals, our AI calculates your ideal protein requirements. This is essential for 
-            muscle recovery, growth, and maintaining lean body mass.
-          </li>
-          <li className="benefit-item">
-            <strong className="benefit-title">Adaptive Goal Setting:</strong> As your fitness level changes, our AI adjusts your 
-            targets, ensuring your goals remain challenging yet achievable.
-          </li>
-          <li className="benefit-item">
-            <strong className="benefit-title">Progress Analytics:</strong> Advanced tracking algorithms monitor your progress, 
-            identifying patterns and suggesting optimizations to your routine.
-          </li>
-        </ul>
+        <div className="importance-content">
+          <div className="importance-text">
+            <p className="section-description">
+              Understanding and monitoring your health metrics is crucial for achieving your fitness goals. 
+              Our AI-powered platform revolutionizes how you approach health and fitness by:
+            </p>
+            <ul className="benefits-list">
+              <li className="benefit-item">
+                <strong className="benefit-title">Personalized Calorie Calculations:</strong> Our AI analyzes your age, weight, height, 
+                activity level, and metabolic rate to determine your optimal daily calorie intake. This precision 
+                ensures you're neither overeating nor undernourishing your body.
+              </li>
+              <li className="benefit-item">
+                <strong className="benefit-title">Smart Protein Recommendations:</strong> Based on your workout intensity, muscle mass, 
+                and fitness goals, our AI calculates your ideal protein requirements. This is essential for 
+                muscle recovery, growth, and maintaining lean body mass.
+              </li>
+              <li className="benefit-item">
+                <strong className="benefit-title">Adaptive Goal Setting:</strong> As your fitness level changes, our AI adjusts your 
+                targets, ensuring your goals remain challenging yet achievable.
+              </li>
+              <li className="benefit-item">
+                <strong className="benefit-title">Progress Analytics:</strong> Advanced tracking algorithms monitor your progress, 
+                identifying patterns and suggesting optimizations to your routine.
+              </li>
+            </ul>
+          </div>
+          <img 
+            src="/assets/images/phone_health.webp" 
+            alt="Health tracking on mobile" 
+            className="importance-image"
+          />
+        </div>
       </section>
 
       <section className="how-to-section">
@@ -107,25 +125,34 @@ const Dashboard = () => {
       </section>
 
       <section className="additional-features">
-        <h3>Advanced Features</h3>
-        <ul>
-          <li>
-            <strong>AI Health Insights:</strong> Receive detailed analysis of your health patterns 
-            and personalized recommendations for improvement.
-          </li>
-          <li>
-            <strong>Smart Notifications:</strong> Get timely reminders for workouts, meals, and 
-            hydration based on your schedule.
-          </li>
-          <li>
-            <strong>Progress Photography:</strong> Securely store and compare progress photos to 
-            visualize your transformation.
-          </li>
-          <li>
-            <strong>Community Support:</strong> Connect with like-minded individuals and share 
-            your success stories.
-          </li>
-        </ul>
+        <div className="features-content">
+          <div className="features-text">
+            <h3>Advanced Features</h3>
+            <ul>
+              <li>
+                <strong>AI Health Insights:</strong> Receive detailed analysis of your health patterns 
+                and personalized recommendations for improvement.
+              </li>
+              <li>
+                <strong>Smart Notifications:</strong> Get timely reminders for workouts, meals, and 
+                hydration based on your schedule.
+              </li>
+              <li>
+                <strong>Progress Photography:</strong> Securely store and compare progress photos to 
+                visualize your transformation.
+              </li>
+              <li>
+                <strong>Community Support:</strong> Connect with like-minded individuals and share 
+                your success stories.
+              </li>
+            </ul>
+          </div>
+          <img 
+            src="/assets/images/woman_active.webp" 
+            alt="Active woman exercising" 
+            className="features-image"
+          />
+        </div>
       </section>
     </div>
   );
