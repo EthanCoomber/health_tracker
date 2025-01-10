@@ -124,7 +124,8 @@
   transition: all 0.2s ease;
   background-color: var(--color-primary);
   color: white;
-  min-width: 120px; /* Added to make buttons consistent width */
+  width: 100%;
+  /* min-width: 120px; Added to make buttons consistent width */
 }
 
 .btn:hover {
