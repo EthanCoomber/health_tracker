@@ -1,9 +1,50 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  workouts: [], // Array to store all workouts
-  currentWorkout: null, // Currently selected/edited workout
-  workoutTypes: ['Cardio', 'Strength', 'Flexibility', 'HIIT'] // Default workout types
+  workouts: [
+    {
+      id: 1,
+      name: "Morning Run",
+      duration: 30,
+      intensity: "moderate",
+      activityType: "cardio",
+      timestamp: "2024-01-15T08:00:00.000Z"
+    },
+    {
+      id: 2, 
+      name: "Weight Training",
+      duration: 45,
+      intensity: "vigorous",
+      activityType: "weights",
+      timestamp: "2024-01-15T16:30:00.000Z"
+    },
+    {
+      id: 3,
+      name: "Yoga Flow",
+      duration: 60,
+      intensity: "light",
+      activityType: "yoga",
+      timestamp: "2024-01-16T07:00:00.000Z"
+    },
+    {
+      id: 4,
+      name: "HIIT Workout",
+      duration: 25,
+      intensity: "maximum",
+      activityType: "hiit",
+      timestamp: "2024-01-16T18:00:00.000Z"
+    },
+    {
+      id: 5,
+      name: "Lap Swimming",
+      duration: 40,
+      intensity: "vigorous", 
+      activityType: "swimming",
+      timestamp: "2024-01-17T12:00:00.000Z"
+    }
+  ],
+  currentWorkout: null,
+  workoutTypes: ['Cardio', 'Strength', 'Flexibility', 'HIIT']
 };
 
 const workoutsSlice = createSlice({
