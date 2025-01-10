@@ -4,108 +4,231 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary), var(--color-primary-light));
-  padding: 1.2rem 2.5rem;
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  padding: 1rem 2rem;
   color: var(--color-text-inverse);
-  border-bottom: 3px solid var(--color-primary-darker);
-  height: 80px;
-  flex-shrink: 0;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  height: 70px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   position: relative;
   z-index: 100;
-  animation: navbarFadeIn 0.5s ease-out;
+  animation: navbarFadeIn 0.4s ease-out;
 }
 
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 1.8rem;
+  gap: 1.5rem;
 }
 
 .profile-button {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
   color: var(--color-text-inverse);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  padding: 0.8rem 1.8rem;
-  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: 600;
-  letter-spacing: 0.8px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  backdrop-filter: blur(8px);
+  gap: 0.6rem;
 }
 
 .profile-button:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .profile-button:active {
-  transform: translateY(0);
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transform: translateY(1px);
 }
 
 .sidebar-toggle {
   display: none;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  font-size: 1.6rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 1.4rem;
   cursor: pointer;
-  margin-right: 1.8rem;
+  margin-right: 1.5rem;
   color: var(--color-text-inverse);
-  padding: 0.6rem;
-  border-radius: 12px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(8px);
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
 .sidebar-toggle:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 1.8rem;
+  gap: 1.5rem;
 }
 
 .navbar-header {
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  letter-spacing: 1px;
-  background: linear-gradient(45deg, var(--color-text-inverse), var(--color-quaternary-accent));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: titlePulse 2s ease-in-out infinite;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-text-inverse);
+  letter-spacing: 0.5px;
 }
 
-@keyframes titlePulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
+/* Added styles for search container */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--color-text-inverse);
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+.search-input {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-text-inverse);
+  padding: 0.6rem 1rem 0.6rem 2.5rem;
+  border-radius: 6px;
+  width: 240px;
+  transition: all 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-input:focus {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.25);
+  outline: none;
+}
+
+/* Added styles for notification button */
+.notification-btn {
+  position: relative;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-text-inverse);
+  padding: 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex; /* Added to properly position the badge */
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--color-error, #dc3545);
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  min-width: 18px; /* Added to ensure consistent width */
+  height: 18px; /* Added to make badge circular */
+  display: flex; /* Added for centering number */
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Added to ensure badge stays on top */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Added shadow for better visibility */
+  border: 2px solid white; /* Added white border for contrast */
+}
+
+/* Added styles for notifications panel */
+.notification-wrapper {
+  position: relative;
+}
+
+.notifications-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 300px;
+  max-width: 400px;
+  z-index: 1000;
+  padding: 0.5rem;
+}
+
+.notification-item {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #edf2f7;
+  color: #2d3748;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-item.unread {
+  background: #ebf8ff;
+  font-weight: 500;
+}
+
+.notification-item:hover {
+  background: #f7fafc;
+}
+
+/* Added styles for profile menu */
+.profile-wrapper {
+  position: relative;
+}
+
+.profile-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  z-index: 1000;
+  padding: 0.5rem;
+}
+
+.profile-menu-item {
+  width: 100%;
+  text-align: left;
+  padding: 0.8rem 1rem;
+  border: none;
+  background: none;
+  color: #2d3748;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-radius: 4px;
+}
+
+.profile-menu-item:hover {
+  background: #f7fafc;
+}
+
+.profile-name {
+  font-size: 0.9rem;
 }
 
 @keyframes navbarFadeIn {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
   to {
     opacity: 1;
@@ -121,10 +244,32 @@
   }
   
   .navbar {
-    padding: 1rem 1.5rem;
+    padding: 0.8rem 1.2rem;
+    height: 60px;
   }
   
   .profile-button {
-    padding: 0.6rem 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .search-input {
+    width: 180px;
+  }
+
+  .profile-name {
+    display: none;
+  }
+
+  .notifications-panel,
+  .profile-menu {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: calc(100vh - 60px);
+    border-radius: 0;
+    overflow-y: auto;
   }
 }
