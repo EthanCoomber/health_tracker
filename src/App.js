@@ -8,6 +8,7 @@ import WorkoutsPage from './pages/WorkoutsPage';
 import MealsPage from './pages/MealsPage';
 import CaloriesPage from './pages/CaloriesPage';
 import Settings from './pages/Settings';
+import ProgressPage from './pages/ProgressPage';
 import './styles/globals.css'; // Ensure your styles are imported
 
 const App = () => {
@@ -29,7 +30,9 @@ const App = () => {
             <Route path="/workouts" element={<WorkoutsPage />} />
             <Route path="/meals" element={<MealsPage />} />
             <Route path="/calories" element={<CaloriesPage />} />
+            <Route path="/progress" element={<ProgressPage />} />
             <Route path="/settings" element={<Settings />} />
+
             {/* Add more routes as needed */}
           </Routes>
         </div>
