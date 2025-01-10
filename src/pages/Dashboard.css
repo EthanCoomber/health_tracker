@@ -114,6 +114,59 @@
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
+  padding: 2rem;
+  background: var(--color-background-alt);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.features-text {
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.features-heading {
+  color: var(--color-text-dark);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature-item {
+  padding: 1rem;
+  background: var(--color-background);
+  border-radius: 8px;
+  border-left: 4px solid var(--color-primary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-title {
+  display: block;
+  color: var(--color-text-dark);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-description {
+  color: var(--color-text);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .features-image {

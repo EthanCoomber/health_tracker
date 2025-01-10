@@ -127,23 +127,27 @@ const Dashboard = () => {
       <section className="additional-features">
         <div className="features-content">
           <div className="features-text">
-            <h3>Advanced Features</h3>
-            <ul>
-              <li>
-                <strong>AI Health Insights:</strong> Receive detailed analysis of your health patterns 
-                and personalized recommendations for improvement.
+            <h3 className="features-heading">Advanced Features</h3>
+            <ul className="features-list">
+              <li className="feature-item">
+                <strong className="feature-title">AI Health Insights:</strong> 
+                <span className="feature-description">Receive detailed analysis of your health patterns 
+                and personalized recommendations for improvement.</span>
               </li>
-              <li>
-                <strong>Smart Notifications:</strong> Get timely reminders for workouts, meals, and 
-                hydration based on your schedule.
+              <li className="feature-item">
+                <strong className="feature-title">Smart Notifications:</strong>
+                <span className="feature-description">Get timely reminders for workouts, meals, and 
+                hydration based on your schedule.</span>
               </li>
-              <li>
-                <strong>Progress Photography:</strong> Securely store and compare progress photos to 
-                visualize your transformation.
+              <li className="feature-item">
+                <strong className="feature-title">Progress Photography:</strong>
+                <span className="feature-description">Securely store and compare progress photos to 
+                visualize your transformation.</span>
               </li>
-              <li>
-                <strong>Community Support:</strong> Connect with like-minded individuals and share 
-                your success stories.
+              <li className="feature-item">
+                <strong className="feature-title">Community Support:</strong>
+                <span className="feature-description">Connect with like-minded individuals and share 
+                your success stories.</span>
               </li>
             </ul>
           </div>
